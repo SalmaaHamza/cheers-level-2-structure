@@ -1,0 +1,68 @@
+.image-container {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.cocktail-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align content and image to the top */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: white;
+  padding: 1rem;
+  justify-content: flex-start;
+  min-width: 50%;
+  margin-bottom: 1rem;
+
+  /* Add a gap between items in the row */
+  gap: 1rem;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1; /* Allow content to fill available space */
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem; /* Add spacing below header row */
+    }
+
+    .header {
+      font-weight: 500;
+      font-size: large;
+      margin-bottom: 0.5rem; /* Add spacing below the title */
+    }
+
+    .alcoholic-container {
+      border-radius: 8px;
+      max-width: fit-content;
+      padding: 0.25rem 0.5rem; /* Adjust padding for better appearance */
+      margin-bottom: 0.5rem; /* Add spacing below the label */
+      font-size: 0.875rem; /* Adjust font size */
+      color: white; /* Ensure text is readable */
+
+      &.alcoholic {
+        background: #516cd99d; /* Alcoholic background */
+      }
+
+      &.non-alcoholic {
+        background: #21ad3d69; /* Non-alcoholic background */
+      }
+    }
+  }
+}
+
+.bookmark-checkbox {
+  margin-left: auto; /* Push to the far right */
+  color: gray;
+  flex-shrink: 0; /* Prevent the checkbox from resizing */
+  cursor: pointer; /* Add a pointer cursor for interactivity */
+}
+

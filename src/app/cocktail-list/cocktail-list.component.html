@@ -1,0 +1,25 @@
+<div class="bg-gray">
+  <h3>Filters</h3>
+  <div class="row">
+    <label for="search">Cocktail Name</label>
+    <input
+      type="search"
+      name="search"
+      placeholder="Search for a cocktail..."
+      id="search"
+      [(ngModel)]="searchText"
+    />
+  </div>
+</div>
+<ng-container *ngIf="cocktails$ | async as cocktails; else loading">
+  <div class="row">
+    <app-cocktail-card
+      class="col-6"
+      *ngFor="let cocktail of cocktails | filter : searchText"
+      [cocktail]="cocktail"
+
+    ></app-cocktail-card>
+  </div>
+</ng-container>
+
+<ng-template #loading>Loading...</ng-template>

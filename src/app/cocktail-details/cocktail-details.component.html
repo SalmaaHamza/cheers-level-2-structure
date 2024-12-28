@@ -1,0 +1,45 @@
+<div class="details-container">
+  <!-- Back Button -->
+  <button class="back-button" onclick="history.back()">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+
+  <!-- Cocktail Details Section -->
+  <div class="details-card">
+    <ng-container *ngIf="cocktail$ | async as cocktail">
+      <div class="image-section">
+        <img
+          [src]="cocktail.imageUrl"
+          [alt]="cocktail.name"
+          class="cocktail-image"
+        />
+      </div>
+      <div class="info-section">
+        <!-- Title and Bookmark -->
+        <div class="title-row">
+          <h1 class="cocktail-name">{{ cocktail.name }}</h1>
+          <button class="bookmark-checkbox" (click)="toggleFavorite()">
+          <span class="icon-star" [class.active]="isFavorite()"></span>
+          </button>
+        </div>
+        <!-- Type -->
+        <p>
+          <strong>Type:</strong>
+          <span class="badge alcoholic">{{
+            getAlcoholic(cocktail.isAlcoholic)
+          }}</span>
+        </p>
+        <!-- Ingredients -->
+        <p><strong>Ingredients:</strong></p>
+        <ul class="ingredients-list">
+          <li *ngFor="let item of cocktail.ingredients">{{ item }}</li>
+        </ul>
+        <!-- Instructions -->
+        <p><strong>Instructions:</strong></p>
+        <p class="instructions">
+          {{ cocktail.instructions }}
+        </p>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Details Container */
+.details-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: #4a5568;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.back-button i {
+  margin-right: 0.5rem;
+}
+
+/* Details Card */
+.details-card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+}
+
+.cocktail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Section */
+.info-section {
+  flex: 2;
+  padding: 20px;
+}
+
+/* Title Row */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cocktail-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.icon-star {
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.icon-star.active {
+  color: gold;
+}
+
+/* Type Badge */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.badge.alcoholic {
+  background-color: #6b46c1;
+}
+
+/* Ingredients List */
+.ingredients-list {
+  list-style-type: disc;
+  margin: 10px 0 20px 20px;
+  padding: 0;
+}
+
+.ingredients-list li {
+  margin-bottom: 5px;
+}
+
+/* Instructions */
+.instructions {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

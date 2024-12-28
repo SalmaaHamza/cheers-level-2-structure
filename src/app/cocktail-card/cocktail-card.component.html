@@ -1,0 +1,28 @@
+<div class="cocktail-card card">
+  <!-- Image Section -->
+  <img class="image-container" [src]="imageSrc" alt="" />
+
+  <!-- Content Section -->
+  <div class="content-container">
+    <div class="row">
+      <a class="header" [routerLink]="['/cocktail', id]">{{ cocktailName }}</a>
+      <button class="bookmark-checkbox" (click)="toggleFavorite()">
+        <span
+          class="icon-star"
+          [class.active]="isFavorite()"
+          [id]="'star-' + id"
+        ></span>
+      </button>
+    </div>
+    <div
+      class="alcoholic-container {{
+        isAlcoholic ? 'alcoholic' : 'non-alcoholic'
+      }}"
+    >
+      {{ Alcoholic }}
+    </div>
+    <span>
+      {{ ingredients.join(" | ") }}
+    </span>
+  </div>
+</div>
