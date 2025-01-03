@@ -9,9 +9,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(items: Cocktail[], searchText: string): Cocktail[]  {
     if (!items) return [];
-    if (!searchText) return items;
-    if (searchText == "") return items;
-
+    if (!searchText || searchText == "") return items;
     return items.filter((item) => item.name.toLowerCase().includes(searchText.toLowerCase()));
   }
 

@@ -36,7 +36,7 @@ export class CocktailCardComponent {
     this.cocktailService.toggleFavorite(this.id);
   }
 
-  // Getter and Setters
+  // Getters
   get imageSrc(): string {
     return this.cocktail.imageUrl;
   }
